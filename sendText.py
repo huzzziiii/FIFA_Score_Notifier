@@ -1,7 +1,11 @@
  # Import required libraries
 import urllib      # URL functions
 import urllib2     # URL functions
- 
+import sys
+reload(sys)
+
+#setting the system default encoding as utf-8 at the start of the script, so that all strings are encoded using that.
+sys.setdefaultencoding('utf-8')
     
 def textMsg(username, hash, number, sender, message):
     
