@@ -1,27 +1,34 @@
 import score
 import sendText
+import twilioSendText
 import config
 
 latest_update = ""
 
 DATA = {
     "hashkey": config.HASH_KEY,
+    "account_sid": config.ACCOUNT_SID,
+    "auth_token": config.AUTH_TOKEN,
     "numbers": config.NUMBER,
     "sender": config.SENDER,
     "uname" : config.USERNAME
+    
 }
 
 num = DATA['numbers']
 hashkey = DATA['hashkey']
+account_sid = DATA['account_sid']
+auth_token = DATA['auth_token']
+
 sender = DATA['sender']
 username = DATA['uname']
-
 #print(num)
 
 while True: 
-    previous_update = score.scoreUpdate()
+    current_update = score.scoreUpdate()
     
-    if previous_update != latest_update:
-        sendText.textMsg(username,hashkey,num,sender,previous_update)
-        print(previous_update)
-        latest_update = previous_update
+    if current_update != latest_update:
+        twilioSendText.sendSMS(account_sid, auth_token, current_update)
+        print(current_update)
+        
+        latest_update = current_update
