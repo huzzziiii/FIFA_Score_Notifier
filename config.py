@@ -12,5 +12,4 @@ AUTH_TOKEN = config['CONFIG']['AUTH_TOKEN']
 
 NUMBER = config['CONFIG']['NUMBER']
 SENDER = config['CONFIG']['SENDER']
-TEAM = config['CONFIG']['TEAM']
 USERNAME = config['CONFIG']['USERNAME']
