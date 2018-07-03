@@ -1,3 +1,3 @@
 # FIFA_Score_Notifier
 
-A script that informs of any goal update of the teams of your choice via text message 
+A script that brings you live score updates of the team you support via text message
